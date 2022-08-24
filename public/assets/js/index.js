@@ -32,7 +32,7 @@ const getNotes = () =>
       'Content-Type': 'application/json',
     },
   });
-
+// A function for saving a note to the db
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
@@ -41,7 +41,7 @@ const saveNote = (note) =>
     },
     body: JSON.stringify(note),
   });
-
+// A function for deleting a note from the db
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
